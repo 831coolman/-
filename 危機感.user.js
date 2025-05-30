@@ -4,6 +4,7 @@
 // @description  強調表示
 // @author       Yuta
 // @match        https://gakujo.iess.niigata-u.ac.jp/campusweb/campusportal.do?page=main&tabId=en
+// @match        file:///C:/Users/Nemle/OneDrive%20-%20%E6%96%B0%E6%BD%9F%E5%A4%A7%E5%AD%A6/%E5%8B%89%E5%BC%B7%E7%94%A8/index.html
 // @grant        none
 // ==/UserScript==
 
