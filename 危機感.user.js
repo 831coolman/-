@@ -15,28 +15,28 @@
 
     const style = document.createElement('style');
     style.textContent=
-              .&{className} {
-                background-color: black;
-                color: yellow;
-                font-weight: bold;
-                padding: 0 2px;
-              }
+        .&{className} {
+            background-color: black;
+            color: yellow;
+            font-weight: bold;
+            padding: 0 2px;
+        }
         :
 document.head.appendChild(style);
 
-function hilightWords(node){
+function highlightWords(node){
     if(node.nodeType===Node.TEXT_NODE){
         const parent=node.parentNode;
-        if(!parent parent.tagName==="SCRIPT" parent.tagName==="STYLE")return;
+        if(!parent parent.tagName==="SCRIPT" || parent.tagName==="STYLE")return;
 
         const text = node.textContent;
         let changed = false;
 
         targetWords.forEach(word=>{
-            const regex = new RegExp((${word}).'g');
+            const regex = new RegExp(`(${word})`,'g');
             if(regex.test(text)){
                 const span = document.createElement('span');
-                span.innerHTML = text.replace(regex,<span class="${className}">&1</span>);
+                span.innerHTML = text.replace(regex,`<span class="${className}">&1</span>`);
                 parent.replaceChild(span,node);
                 changed=true;
             }
